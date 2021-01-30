@@ -1,0 +1,11 @@
+{
+    "name": "hexlet/code",
+    "description": "Brains games project",
+    "authors": [
+        {
+            "name": "romanitalian",
+            "email": "romanitalian.net@gmail.com"
+        }
+    ],
+    "require": {}
+}
