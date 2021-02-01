@@ -9,3 +9,6 @@ validate:
 
 run:
 	./bin/brain-games
+
+lint:
+	composer phpcs

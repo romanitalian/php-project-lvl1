@@ -1,9 +1,6 @@
 <?php
 
-
 namespace Brain\Games;
-
-require_once __DIR__ . "/../../vendor/autoload.php";
 
 use function cli\line;
 use function cli\prompt;
@@ -14,21 +11,21 @@ use function cli\prompt;
  */
 class Cli
 {
-    const WelcomeSentence = 'Welcome to the Brain Game!';
-    const GetNamePrompt = 'May I have your name?';
+    private const WELCOME_TO_THE_BRAIN_GAME = 'Welcome to the Brain Game!';
+    private const ASK_NAME = 'May I have your name?';
 
-    public function Start()
+    public function start()
     {
         $this->sayWelcome();
-        $this->AskNameAndSayHello();
+        $this->askNameAndSayHello();
     }
 
     protected function sayWelcome()
     {
-        line(static::WelcomeSentence);
+        line(static::WELCOME_TO_THE_BRAIN_GAME);
     }
 
-    protected function AskNameAndSayHello()
+    protected function askNameAndSayHello()
     {
         line("Hello, %s!", $this->askUserName());
     }
@@ -38,6 +35,6 @@ class Cli
      */
     protected function askUserName()
     {
-        return prompt(static::GetNamePrompt);
+        return prompt(static::ASK_NAME);
     }
 }
