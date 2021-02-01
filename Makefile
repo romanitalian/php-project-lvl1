@@ -6,3 +6,6 @@ brain-games:
 
 validate:
 	composer validate
+
+run:
+	./bin/brain-games
