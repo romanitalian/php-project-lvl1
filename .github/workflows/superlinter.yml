@@ -19,7 +19,7 @@ jobs:
 
       # Runs the Super-Linter action
       - name: Run Super-Linter
-        run: make lint
+        run: make install && make lint
         env:
           DEFAULT_BRANCH: GACTIONS
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
