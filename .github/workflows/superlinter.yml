@@ -17,5 +17,4 @@ jobs:
       - name: Make lint
         run: make lint
         env:
-          DEFAULT_BRANCH: GACTIONS
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
