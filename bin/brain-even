@@ -1,0 +1,8 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . "/../vendor/autoload.php";
+
+
+$quiz = new Brain\Games\Even\Quiz();
+$quiz->start();
