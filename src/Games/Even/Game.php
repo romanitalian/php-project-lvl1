@@ -42,15 +42,7 @@ class Game extends Engine
         $isCorrect = $this->isCorrect((int)$expression);
         $expected = $isCorrect ? $this->isEvenAnswer : $this->isNotEvenAnswer;
 
-        if ($ans == $expected) {
-            $this->showCorrect();
-            $this->correctAnswersCounter++;
-        } else {
-            $this->showFailGame($ans, $expected);
-            return false;
-        }
-
-        return true;
+        return $this->processAnswer($expected, $ans);
     }
 
     /**

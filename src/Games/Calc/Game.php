@@ -12,9 +12,6 @@ use Matex\Evaluator;
  */
 class Game extends Engine
 {
-
-    const MAX_RANDOM_NUMBER_IN_QUESTION = 100;
-
     protected int $askCount = 3;
     protected int $correctAnswersCounter = 0;
     protected string $gameRulesMsg = 'What is the result of the expression?';
@@ -35,7 +32,6 @@ class Game extends Engine
         parent::start();
         $this->setEvaluator();
 
-        // What is the result of the expression?
         $this->showGameRules();
         $this->gameFlow();
     }
@@ -58,18 +54,9 @@ class Game extends Engine
         $expected = $this->calculateAnswerValue($expression);
 
         $this->showQuestion($expression);
-
         $ans = $this->askAnswer();
 
-        if ($ans == $expected) {
-            $this->showCorrect();
-            $this->correctAnswersCounter++;
-        } else {
-            $this->showFailGame($ans, $expected);
-            return false;
-        }
-
-        return true;
+        return $this->processAnswer($expected, $ans);
     }
 
     /**

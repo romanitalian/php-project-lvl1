@@ -9,6 +9,8 @@ use function cli\prompt;
 
 abstract class Engine extends Cli implements GameInterface
 {
+    const MAX_RANDOM_NUMBER_IN_QUESTION = 100;
+
     protected int $askCount = 3;
     protected int $correctAnswersCounter = 0;
     protected string $gameRulesMsg = 'Game Rules';
@@ -50,7 +52,23 @@ abstract class Engine extends Cli implements GameInterface
     abstract protected function gameRound(): bool;
     abstract protected function getExpression(): string;
 
+    /**
+     * @param $expected
+     * @param $ans
+     * @return bool
+     */
+    protected function processAnswer($expected, $ans): bool
+    {
+        if ($ans == $expected) {
+            $this->showCorrect();
+            $this->correctAnswersCounter++;
+        } else {
+            $this->showFailGame($ans, $expected);
+            return false;
+        }
 
+        return true;
+    }
 
     /**
      * @return string
