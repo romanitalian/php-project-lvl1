@@ -26,21 +26,6 @@ class Game extends Engine
     protected array $numbers = [];
 
     /**
-     * @return bool
-     */
-    protected function gameRound(): bool
-    {
-        $expression = $this->getExpression();
-
-        $expected = $this->calculateAnswerValue();
-
-        $this->showQuestion($expression);
-        $ans = $this->askAnswer();
-
-        return $this->processAnswer($expected, $ans);
-    }
-
-    /**
      * Example: "5 7 9 11 13 .. 17 19 21 23"
      * @return string
      */

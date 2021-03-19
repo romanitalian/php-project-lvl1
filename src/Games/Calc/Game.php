@@ -42,21 +42,6 @@ class Game extends Engine
     }
 
     /**
-     * @return bool
-     * @throws \Matex\Exception
-     */
-    protected function gameRound(): bool
-    {
-        $expression = $this->getExpression();
-        $expected = $this->calculateAnswerValue($expression);
-
-        $this->showQuestion($expression);
-        $ans = $this->askAnswer();
-
-        return $this->processAnswer($expected, $ans);
-    }
-
-    /**
      * @param $expression
      * @return false|float|mixed|string
      * @throws \Matex\Exception
