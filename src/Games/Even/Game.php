@@ -19,18 +19,6 @@ class Game extends Engine
     private string $isNotEvenAnswer = "no";
 
     /**
-     * Start the Game!
-     */
-    public function start()
-    {
-        parent::start();
-
-        // Answer "yes" if the number is even, otherwise answer "no".
-        $this->showGameRules();
-        $this->gameFlow();
-    }
-
-    /**
      * @return bool
      */
     protected function gameRound(): bool

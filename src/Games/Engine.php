@@ -27,6 +27,9 @@ abstract class Engine extends Cli implements GameInterface
     public function start()
     {
         parent::start();
+
+        $this->showGameRules();
+        $this->gameFlow();
     }
 
     /**

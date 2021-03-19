@@ -22,18 +22,15 @@ class Game extends Engine
     protected string $cheerUpMsg = "Let's try again, %s!";
     protected Evaluator $evaluator;
     protected array $operationsDict = ["+", "-", "*"];
-    private $operationDefault = "+";
+    private string $operationDefault = "+";
 
     /**
      * Start the Game!
      */
     public function start()
     {
-        parent::start();
         $this->setEvaluator();
-
-        $this->showGameRules();
-        $this->gameFlow();
+        parent::start();
     }
 
     /**

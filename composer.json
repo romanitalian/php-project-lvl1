@@ -11,7 +11,8 @@
     "bin": [
         "bin/brain-games",
         "bin/brain-even",
-        "bin/brain-gcd"
+        "bin/brain-gcd",
+        "bin/brain-progression"
     ],
     "autoload": {
         "psr-4": {

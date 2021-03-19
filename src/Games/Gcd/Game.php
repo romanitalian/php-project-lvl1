@@ -14,18 +14,7 @@ class Game extends Engine
     protected string $gameRulesMsg = "Find the greatest common divisor of given numbers.";
     protected array $vals = [];
 
-    /**
-     * Start the Game!
-     */
-    public function start()
-    {
-        parent::start();
-
-        $this->showGameRules();
-        $this->gameFlow();
-    }
-
-    /**
+     /**
      * Core part of The Game.
      * @return bool
      */

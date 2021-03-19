@@ -76,6 +76,26 @@ Correct!
 Congratulations, Sam!
 ```
 
+### make brain-progression
+
+```shell
+Welcome to the Brain Games!
+May I have your name? Sam
+Hello, Sam!
+What number is missing in the progression?
+Question: 5 7 9 11 13 .. 17 19 21 23
+Your answer: 15
+Correct!
+Question: 2 5 8 .. 14 17 20 23 26 29
+Your answer: 11
+Correct!
+Question: 14 19 24 29 34 39 44 49 54 ..
+Your answer: 59
+Correct!
+Congratulations, Sam!
+```
+
+
 <hr />
 
 See how to play in examples by the link below:
@@ -90,3 +110,7 @@ https://asciinema.org/a/SshWprHDBDyFjjjz87JYYZfSR
 - brain-gcd
 
 https://asciinema.org/a/srHD9Gmh1sOjcGCJXiZo1TgfV
+
+- make brain-progression
+
+https://asciinema.org/a/RQp1w3yBFrmqA4wxurSTOlHtI
