@@ -11,6 +11,9 @@ abstract class Engine extends Cli implements GameInterface
 {
     const MAX_RANDOM_NUMBER_IN_QUESTION = 100;
 
+    protected string $yesAnswer = "yes";
+    protected string $noAnswer = "no";
+
     protected int $askCount = 3;
     protected int $correctAnswersCounter = 0;
     protected string $gameRulesMsg = 'Game Rules';
@@ -33,6 +36,11 @@ abstract class Engine extends Cli implements GameInterface
     }
 
     /**
+     * @return string
+     */
+    abstract protected function getExpression(): string;
+
+    /**
      *
      */
     protected function gameFlow()
@@ -52,8 +60,16 @@ abstract class Engine extends Cli implements GameInterface
      * Game flow
      * @return bool
      */
-    abstract protected function gameRound(): bool;
-    abstract protected function getExpression(): string;
+    protected function gameRound(): bool
+    {
+        $expression = $this->getExpression();
+        $expected = $this->calculateAnswerValue();
+
+        $this->showQuestion($expression);
+        $ans = $this->askAnswer();
+
+        return $this->processAnswer($expected, $ans);
+    }
 
     /**
      * @param $expected

@@ -15,8 +15,6 @@ class Game extends Engine
     const MAX_RANDOM_NUMBER_IN_QUESTION = 100;
 
     protected string $gameRulesMsg = 'Answer "yes" if the number is even, otherwise answer "no".';
-    private string $isEvenAnswer = "yes";
-    private string $isNotEvenAnswer = "no";
 
     /**
      * @return bool
@@ -28,7 +26,7 @@ class Game extends Engine
         $ans = $this->askAnswer();
 
         $isCorrect = $this->isCorrect((int)$expression);
-        $expected = $isCorrect ? $this->isEvenAnswer : $this->isNotEvenAnswer;
+        $expected = $isCorrect ? $this->yesAnswer : $this->noAnswer;
 
         return $this->processAnswer($expected, $ans);
     }

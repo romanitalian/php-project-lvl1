@@ -114,3 +114,7 @@ https://asciinema.org/a/srHD9Gmh1sOjcGCJXiZo1TgfV
 - make brain-progression
 
 https://asciinema.org/a/RQp1w3yBFrmqA4wxurSTOlHtI
+
+- make brain-prime
+
+https://asciinema.org/a/77T8ENfr9UghGPPWmQjzpofCT
