@@ -1,48 +1,16 @@
 <?php
 
-namespace Brain;
+namespace Brain\Cli;
 
 use function cli\line;
 use function cli\prompt;
 
-/**
- * Class Cli
- * @package Brain\Games\Cli
- */
-class Cli
+define('RULE_GAME', 'Welcome to the Brain Game!');
+define('ASK_NAME_MSG', 'May I have your name?');
+define('HELLO_MSG', 'Hello, %s!');
+
+function run()
 {
-    protected const WELCOME_TO_THE_BRAIN_GAME = 'Welcome to the Brain Games!';
-    protected const ASK_NAME = 'May I have your name?';
-    protected string $userName;
-
-    public function start()
-    {
-        $this->sayWelcome();
-        $this->askUserName();
-        $this->sayHello();
-    }
-
-    /**
-     *
-     */
-    protected function sayWelcome()
-    {
-        line(static::WELCOME_TO_THE_BRAIN_GAME);
-    }
-
-    /**
-     *
-     */
-    protected function sayHello()
-    {
-        line("Hello, %s!", $this->userName);
-    }
-
-    /**
-     * @return string
-     */
-    protected function askUserName()
-    {
-        $this->userName = prompt(static::ASK_NAME);
-    }
+    line(RULE_GAME);
+    line(HELLO_MSG, prompt(ASK_NAME_MSG));
 }

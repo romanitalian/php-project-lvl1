@@ -1,6 +1,8 @@
 install:
 	composer install
 
+reinstall:
+	 chmod +x bin/brain-* && rm -rf ./vendor && make install
 
 validate:
 	composer validate
