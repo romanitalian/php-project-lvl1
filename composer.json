@@ -9,16 +9,18 @@
         }
     ],
     "bin": [
-        "bin/brain-games",
-        "bin/brain-even",
-        "bin/brain-gcd",
-        "bin/brain-progression",
-        "bin/brain-prime"
+        "bin/brain-calc"
     ],
     "autoload": {
-        "psr-4": {
-            "Brain\\": "src/"
-        }
+        "files": [
+            "src/Cli.php",
+            "src/Engine.php",
+            "src/Game/Calc.php",
+            "src/Game/Even.php",
+            "src/Game/Gcd.php",
+            "src/Game/Prime.php",
+            "src/Game/Progression.php"
+        ]
     },
     "scripts": {
         "phpcs": "phpcs --standard=PSR2 src bin"
